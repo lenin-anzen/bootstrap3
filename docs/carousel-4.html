@@ -1,0 +1,184 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Carousel: </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/carousel-4.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="video-container"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="./" class="btn btn-sm btn-primary">Inicio</a>
+            </div>
+        </div>
+        <div class="row">
+            <div id="carousel-video" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-video" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-video" data-slide-to="1"></li>
+                    <li data-target="#carousel-video" data-slide-to="2"></li>
+                    <li data-target="#carousel-video" data-slide-to="3"></li>
+                    <li data-target="#carousel-video" data-slide-to="4"></li>
+                    <li data-target="#carousel-video" data-slide-to="5"></li>
+                    <li data-target="#carousel-video" data-slide-to="6"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div id="container1"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container2"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container3"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container4"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container5"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container6"></div>
+                    </div>
+                    <div class="item">
+                        <div id="container7"></div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-video" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-video" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/904fd89767.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/jwplayer/jwplayer.js"></script>
+    <script type="text/javascript">jwplayer.key = "RvqjaDNsBmfDvngTqpzTAtE0QkRws/+H98K06g==";</script>
+
+<script type="text/javascript">
+    'use strict';
+    (function ($) {
+        var flashplayer = "https://cdn.jsdelivr.net/jwplayer/7.1.4/jwplayer.flash.swf";
+
+        jwplayer('video-container').setup({
+            file: '/bootstrap/assets/video/unam/convenios_internacionales_para_estudiar_el_fondo_marino-3.m4v',
+            flashplayer: flashplayer,
+            width: 600,
+            height: 250,
+            autostart: true,
+            controls: true,
+            skin: {
+                name: "stormtrooper"
+            }
+        });
+
+
+        var videos = [
+            {
+                id: 'container1',
+                url: '/bootstrap/assets/video/unam/convenios_internacionales_para_estudiar_el_fondo_marino-3.m4v',
+                autostart: true
+            },
+            {
+                id: 'container2',
+                url: '/bootstrap/assets/video/unam/camaron_importante_recurso_pesquero_de_mexico.mp4',
+                autostart: false
+            },
+            {
+                id: 'container3',
+                url: '/bootstrap/assets/video/unam/conocer_el_fitoplancton_1_Min-2.m4v',
+                autostart: false
+            },
+            {
+                id: 'container4',
+                url: '/bootstrap/assets/video/unam/crustaceos_en_el_mar_profundo_del_Golfo_de_Mexico.mp4',
+                autostart: false
+            },
+            {
+                id: 'container5',
+                url: '/bootstrap/assets/video/unam/descubrimiento_de_una_especie_probopyrus_pacificencis-5.m4v',
+                autostart: false
+            },
+            {
+                id: 'container6',
+                url: '/bootstrap/assets/video/unam/especies_de_equinodermos_en_mexico-6.m4v',
+                autostart: false
+            },
+            {
+                id: 'container7',
+                url: '/bootstrap/assets/video/unam/fenomenos_hidrotermales_en_fondos_marinos_1_Min-7.m4v',
+                autostart: false
+            }
+        ];
+        $('.carousel').carousel({
+            interval: false
+        });
+        $.each(videos, function (i, element) {
+            // Set up players
+            jwplayer(element.id).setup({
+                file: element.url,
+                flashplayer: flashplayer,
+                width: $('#carousel-video').width(),
+                height: 350,
+                autostart: element.autostart,
+                controls: true
+            });
+        });
+        // Carousel events
+        $('.carousel').on('slide.bs.carousel', function (event) {
+            if (jwplayer) {
+                var id = event.relatedTarget.id;
+                var video_id = $('#' + id).find('div').attr('id');
+                jwplayer(video_id).pause();
+            }
+        });
+        $('.carousel').on('slid.bs.carousel', function (event) {
+            if (jwplayer) {
+                var id = event.relatedTarget.id;
+                $.each(videos, function (i, element) {
+                    // Find ID in panel
+                    if (
+                        $('#' + id).find('div').length &&
+                        jwplayer(element.id).getState().toUpperCase() === 'PAUSED'
+                    ) {
+                        jwplayer(element.id).play();
+                    }
+                });
+            }
+        });
+    })(jQuery);
+</script>
+</body>
+
+</html>

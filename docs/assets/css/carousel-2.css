@@ -1,0 +1,43 @@
+body {
+    padding-top: 20px;
+}
+#myCarousel .nav a small {
+    display: block;
+}
+#myCarousel .nav {
+    background: #eee;
+}
+#myCarousel .item {
+    height:340px;
+}   
+#myCarousel .item h3 {
+    font-size:5em;
+    text-align:center;
+    margin:60px 0;
+}
+#myCarousel .item p {
+    text-align:left;
+    color:#fff;
+}
+#myCarousel .carousel-caption {
+    float:left;    
+}
+#myCarousel .nav-justified > li > a {
+    border-radius: 0px;
+}
+#myCarousel .nav-pills>li[data-slide-to="0"].active a, .item[data-slide-bg="0"] { 
+    background-color: #16a085; 
+    transition:all 0.3s;
+}
+#myCarousel .nav-pills>li[data-slide-to="1"].active a, .item[data-slide-bg="1"]{ 
+    background-color: #e67e22;
+    transition:all 0.3s;
+}
+#myCarousel .nav-pills>li[data-slide-to="2"].active a,.item[data-slide-bg="2"] { 
+    background-color: #2980b9;
+    transition:all 0.3s;
+}
+#myCarousel .nav-pills>li[data-slide-to="3"].active a, .item[data-slide-bg="3"] { 
+    background-color: #8e44ad;
+    transition:all 0.3s;
+}

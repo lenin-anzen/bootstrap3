@@ -1,0 +1,16 @@
+video {
+    max-width: 100%;
+    height: auto;
+}
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+    height: 30px;
+    max-height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+}
+.carousel .carousel-control.right {
+    left: auto;
+    right: 20px;
+}

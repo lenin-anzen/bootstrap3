@@ -1,0 +1,64 @@
+section.video {
+    position: relative;
+    height: 800px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+}
+.video.v-center, .video .v-center {
+    display: table;
+    width: 100%;
+}
+.video .hero-unit {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+.video .container {
+    position: relative;
+    z-index: 2;
+}
+section * {
+    z-index: 2;
+}
+section {
+    font-weight:100;
+    margin:85px 0;
+}
+video {
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -100;
+    width: 1422px;
+    height: 799.875px;
+}
+.video #bgVideo {
+    overflow: hidden;
+}
+.video #bgVideo > video {
+    position: absolute !important;
+    top: 0 !important;
+}
+.video > div, .video .v-center > div {
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: none;
+}
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: 50% 50% no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

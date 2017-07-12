@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Carousel: Video.js</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap-accessibility.css">
+    <link rel="stylesheet" href="assets/css/carousel-3.css">
+
+    <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="carousel-video" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-video" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-video" data-slide-to="1"></li>
+                    <li data-target="#carousel-video" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <video id="firstVideo" autoplay loop controls data-setup="{'autoplay': true}" class="video-js vjs-default-skin" oncontextmenu="return false;">
+                            <source src="assets/video/unam/convenios_internacionales_para_estudiar_el_fondo_marino-3.m4v" type="video/mp4"> Your browser does not support the video tag.
+                            <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                        </video>
+                    </div>
+                    <div class="item">
+                        <video id="secondVideo" autoplay="false" loop controls data-setup="{'autoplay': false}" class="video-js vjs-default-skin" oncontextmenu="return false;">
+                            <source src="assets/video/unam/camaron_importante_recurso_pesquero_de_mexico.mp4" type="video/mp4"> Your browser does not support the video tag.
+                            <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                        </video>
+                    </div>
+                    <div class="item">
+                        <video id="thirdVideo" autoplay="false" loop controls data-setup="{}" class="video-js vjs-default-skin" oncontextmenu="return false;">
+                            <source src="assets/video/unam/conocer_el_fitoplancton_1_Min-2.m4v" type="video/mp4"> Your browser does not support the video tag.
+                            <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+                        </video>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-video" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-video" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://use.fontawesome.com/904fd89767.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap-accessibility.min.js"></script>
+    <script type="text/javascript">
+    // Disable Video.JS Analitycs
+    window.HELP_IMPROVE_VIDEOJS = false;
+    </script>
+    <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+
+        })(jQuery);
+    </script>
+</body>
+
+</html>

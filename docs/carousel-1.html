@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Carousel: Animate</title>
+
+    <!--
+        Bootstrap Image Carousel Slider with Animate.css
+        http://bootsnipp.com/snippets/z4Pv1 
+    -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap-accessibility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/carousel-1.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="first-slider">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- Item 1 -->
+                <div class="item active slide1">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-3 text-right">
+                                <img style="max-width: 200px;" data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png">
+                            </div>
+                            <div class="col-md-9 text-left">
+                                <h3 data-animation="animated bounceInDown">Add images, or even your logo!</h3>
+                                <h4 data-animation="animated bounceInUp">Easily use stunning effects</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="item slide2">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h3 data-animation="animated bounceInDown"> 50 animation options A beautiful</h3>
+                                <h4 data-animation="animated bounceInUp">Create beautiful slideshows </h4>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <img style="max-width: 200px;" data-animation="animated zoomInLeft" src="http://s20.postimg.org/sp11uneml/rack_server_unlock.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="item slide3">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h3 data-animation="animated bounceInDown">Simple Bootstrap Carousel</h3>
+                                <h4 data-animation="animated bounceInUp">Bootstrap Image Carousel Slider with Animate.css</h4>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <img style="max-width: 200px;" data-animation="animated zoomInLeft" src="http://s20.postimg.org/eq8xvxeq5/globe_network.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="item slide4">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h3 data-animation="animated bounceInDown">We are creative</h3>
+                                <h4 data-animation="animated bounceInUp">Get start your next awesome project</h4>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <img style="max-width: 200px;" data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Item 4 -->
+
+            </div>
+            <!-- End Wrapper for slides-->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1 text-center">
+
+                <h6>Coded with <i class="fa fa-heart red" style="color: #BC0213;"></i> by <a href="http://hashif.com" target="_blank">Hashif</a></h6>
+            </div>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/904fd89767.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/carousel-1.js"></script>
+    <script src="assets/js/bootstrap-accessibility.min.js"></script>
+
+    <script type="text/javascript">
+        (function($){
+            
+        })(jQuery);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "bootstrap3",
+  "version": "1.0.0",
+  "description": "Bootstrap 3 snippets",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenin-anzen/bootstrap3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenin-anzen/bootstrap3/issues"
+  },
+  "homepage": "https://github.com/lenin-anzen/bootstrap3#readme",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

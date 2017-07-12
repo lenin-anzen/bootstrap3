@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Registro de usuarios: 4</title>
+    <!--
+        Registration Form and Validation
+        http://bootsnipp.com/snippets/8ANqZ
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap-accessibility.css">
+    <link rel="stylesheet" href="assets/css/register-4.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="" method="post" id="fileForm" role="form" data-toggle="validator">
+                    <fieldset>
+                        <legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
+                        <div class="form-group">
+                            <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
+                            <input required type="text" name="phonenumber" id="phone" class="form-control phone" maxlength="28"                                placeholder="not used for marketing" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname"><span class="req">* </span> First name: </label>
+                            <input class="form-control" type="text" name="firstname" id="txt" required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname"><span class="req">* </span> Last name: </label>
+                            <input class="form-control" type="text" name="lastname" id="txt" placeholder="hyphen or single quote OK"                                required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="req">* </span> Email Address: </label>
+                            <input class="form-control" required type="text" name="email" id="email" />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label>
+                            <input class="form-control" type="text" name="username" id="txt" placeholder="minimum 6 letters"                                required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><span class="req">* </span> Password: </label>
+                            <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" id="pass1" />                            </p>
+
+                            <label for="password"><span class="req">* </span> Password Confirm: </label>
+                            <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate" id="pass2" />
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" required name="terms" id="field_terms">   <label for="terms">I agree with the <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label>
+                            <span class="req">* </span>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+                        </div>
+                        <h5>You will receive an email to complete the registration and validation process. </h5>
+                        <h5>Be sure to check your spam folders. </h5>
+                    </fieldset>
+                </form>
+                <!-- ends register form -->
+            </div>
+            <!-- ends col-6 -->
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/904fd89767.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+    <script src="assets/js/bootstrap-accessibility.min.js"></script>
+
+    <script type="text/javascript">
+        (function($){
+            
+        })(jQuery);
+    </script>
+</body>
+
+</html>

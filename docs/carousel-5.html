@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Carousel: AnythingSlider</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/anythingslider.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="./" class="btn btn-sm btn-primary">Inicio</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="slider">
+                    <li>
+                        <div id="container1"></div>
+                    </li>
+                    <li>
+                        <div id="container2"></div>
+                    </li>
+                    <li>
+                        <div id="container3"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://use.fontawesome.com/904fd89767.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap-accessibility.min.js"></script>
+    <script src="assets/js/anythingslider/jquery.anythingslider.min.js"></script>
+    <script src="assets/js/anythingslider/swfobject.js"></script>
+
+    <script src="assets/js/jwplayer/jwplayer.js"></script>
+    <script type="text/javascript">jwplayer.key = "RvqjaDNsBmfDvngTqpzTAtE0QkRws/+H98K06g==";</script>
+
+<script type="text/javascript">
+    (function ($) {
+        var flashplayer = "https://cdn.jsdelivr.net/jwplayer/7.1.4/jwplayer.flash.swf";
+        var videos = [{
+            'id': 'container1',
+            'url': '/bootstrap/assets/video/unam/convenios_internacionales_para_estudiar_el_fondo_marino-3.m4v',
+        },
+        {
+            'id': 'container2',
+            'url': '/bootstrap/assets/video/unam/camaron_importante_recurso_pesquero_de_mexico.mp4',
+        },
+        {
+            'id': 'container3',
+            'url': '/bootstrap/assets/video/unam/conocer_el_fitoplancton_1_Min-2.m4v',
+        }];
+        // Set up players 
+        $.each(videos, function (i, element) {
+            jwplayer(element.id).setup({
+                file: element.url,
+                flashplayer: flashplayer,
+                width: 660,
+                height: 350,
+                controls: true
+            });
+        });
+        // Set up AnythingSlider
+        $('#slider').anythingSlider({
+            // pause all videos when changing slides
+            onSlideInit: function (e, slider) {
+                if (jwplayer) {
+                    $.each(videos, function (i) {
+                        jwplayer(i).pause(true);
+                    });
+                }
+            },
+            // Only play a paused video when a slide comes into view
+            onSlideComplete: function (slider) {
+                if (jwplayer) {
+                    $.each(videos, function (i, v) {
+                        // find ID in panel
+                        if (
+                            slider.$currentPage.find('#' + v[0]).length &&
+                            jwplayer(v[0]).getState().toUpperCase() === 'PAUSED'
+                        ) {
+                            jwplayer(v[0]).play();
+                        }
+                    });
+                }
+            },
+            // *********** Video ***********
+            // this DOES NOTHING because jwplayer is set up outside of AnythingSlider
+            addWmodeToObject: "opaque",
+            // return true if video is playing or false if not
+            isVideoPlaying: function (slider) {
+                if (jwplayer) {
+                    // jwplayer object is wrapped in #{id}_wrapper
+                    var vid = slider.$currentPage.find('[id$=_wrapper]'),
+                        jwid = (vid.length) ? vid.attr('id').replace(/_wrapper/, '') : '';
+                    if (
+                        vid.find('#' + jwid).length &&
+                        jwplayer(jwid).getState().toUpperCase() === 'PLAYING'
+                    ) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

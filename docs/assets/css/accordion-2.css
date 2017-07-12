@@ -1,0 +1,10 @@
+.panel-heading a:after {
+    font-family: 'fontawesome';
+    content: "\f07d";
+    float: right;
+    color: grey;
+}
+.panel-heading {
+    cursor: pointer;
+    cursor: hand;
+}
